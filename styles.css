@@ -1,0 +1,207 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E8F4FA;
+    color: #34495E;
+}
+
+header {
+    background-image: url('img/emcabezado.jpg'); /* Ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0.5em 0;
+    font-size: 3em; /* Tamaño de fuente ajustado */
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #95E6A7;
+}
+
+section {
+    padding: 2em;
+    margin: 1em;
+    background-color: #F1F1F1;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #2C3E50;
+    font-size: 1.6em;
+    text-shadow: 1px 1px 2px #ccc;
+    margin-bottom: 0.5em;
+    transition: transform 0.3s ease;
+}
+
+h2:hover {
+    transform: scale(1.05);
+}
+
+p, ul li {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.responsive {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: #27AE60;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    margin-top: 2em;
+}
+
+/* Estilos para las imágenes de la sección de imágenes con transición */
+.imgs {
+    display: flex;
+    flex-wrap: wrap; /* Se ajusta en columnas en pantallas pequeñas */
+    width: 100%;
+    height: auto;
+}
+
+.imgs img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+.imgs img:hover {
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+/* Estilos generales del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para la ventana emergente */
+.ventana-emergente:target {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.ventana-emergente {
+    display: none;
+}
+
+/* Estilos para cerrar la ventana emergente */
+.cerrar a {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #333;
+    font-size: 18px;
+}
+
+/* Fondo de sección con gradiente e imagen */
+.bg-sec {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(img/fondo.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 30px 0;
+}
+
+/* Estilos para el botón de flecha arriba */
+.flecha-arriba {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #27AE60;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+.flecha-arriba img {
+    width: 20px;
+    height: auto;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em; /* Ajuste del tamaño del encabezado */
+    }
+
+    nav a {
+        display: block; /* Nav en columna */
+        margin: 5px 0;
+    }
+
+    .imgs {
+        flex-direction: column; /* Imágenes en columnas */
+    }
+
+    .flecha-arriba {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    section {
+        padding: 1em;
+        margin: 0.5em;
+    }
+
+    .flecha-arriba {
+        width: 35px;
+        height: 35px;
+    }
+
+    .flecha-arriba img {
+        width: 15px;
+    }
+}
